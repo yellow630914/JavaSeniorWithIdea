@@ -1,4 +1,4 @@
-package com.lijen.multithreading;
+package com.lijen.firstuseidea;
 
 public class HelloWorld {
     public static final int I = 10;
@@ -8,5 +8,6 @@ public class HelloWorld {
         System.out.println("Hello");
 
         System.out.println("shit");
+        System.out.println(I);
     }
 }
