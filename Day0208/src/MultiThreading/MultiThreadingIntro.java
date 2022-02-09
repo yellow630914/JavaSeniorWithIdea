@@ -20,6 +20,9 @@ package MultiThreading;
 
     Java的線程:一個Java應用程序java.exe，其實至少有三個線程：main()主線程，gc()垃圾回收線程，異常處理線程。當然如果發生異常，會影響主線程。
 
+    線程的創建與啟動:
+        Java語言的JVM允許程序運行多個線程，它通過java.lang.Thread類來體現。
+
 
 
 
