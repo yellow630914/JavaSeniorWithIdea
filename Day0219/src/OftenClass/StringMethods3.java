@@ -46,8 +46,8 @@ public class StringMethods3 {
         String str4 = "you just have to say that you're fine but you're not really fine";
         //根據給定正則表達式的匹配拆分此字符串。
         String[] strArray = str4.split(" ");
-        for (int i = 0; i < strArray.length; i++) {
-            System.out.println(strArray[i]);
+        for (String s : strArray) {
+            System.out.println(s);
         }
     }
 }
