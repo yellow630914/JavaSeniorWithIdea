@@ -22,6 +22,9 @@ public class TimeAPIIntro {
     }
 
     /*
+    2. java.util.Date類
+        表示特定的瞬間，精確到毫秒
+
     |---java.util.Date
            |---java.sql.Date
 
