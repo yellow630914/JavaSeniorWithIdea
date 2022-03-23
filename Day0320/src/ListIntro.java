@@ -9,9 +9,9 @@
     ArrayList,LinkedList,Vector三者的異同?
     同:三個類都是實現了List接口,可以存儲有序的可重複的數據。
     不同:
-        ArrayList:線程不安全的,效率較高。底層使用Object[]存儲。
-        LinkedList:對於頻繁的插入刪除操作,使用此類效率更高。底層使用雙向鍊表存儲。
-        Vector:線程安全的,效率較低。底層使用Object[]存儲。
+        ArrayList:線程不安全的,效率較高。底層使用Object[]存儲。
+            LinkedList:對於頻繁的插入刪除操作,使用此類效率更高。底層使用雙向鍊表存儲。
+        Vector:線程安全的,效率較低。底層使用Object[]存儲。這是一個古老實現類。
 
 
     List接口的常用方法:
