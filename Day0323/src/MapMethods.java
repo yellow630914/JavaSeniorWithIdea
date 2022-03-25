@@ -18,6 +18,15 @@
          Collection values()：返回所有value構成的Collection集合
          Set entrySet()：返回所有key-value對構成的Set集合
 
+
+    常用方法:
+        添加:Object put(Object key,Object value)
+        刪除:Object remove(Object key)
+        修改:Object put(Object key,Object value)
+        查詢:Object get(Object key)
+        長度:int size()
+        遍歷:Set keySet()/Collection values()/Set entrySet()
+
  */
 
 import org.junit.Test;
