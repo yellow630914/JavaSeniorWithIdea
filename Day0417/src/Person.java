@@ -1,6 +1,5 @@
 
-@MyAnnotation
-public class Person extends Creature<String> implements Comparable<String>,MyInterface{
+public class Person implements Comparable<String>{
 
     private String name;
     int age;
@@ -9,7 +8,9 @@ public class Person extends Creature<String> implements Comparable<String>,MyInt
     public Person() {
     }
 
-    private Person (String name){
+
+
+    private Person(String name){
         this.name = name;
     }
 
@@ -18,12 +19,16 @@ public class Person extends Creature<String> implements Comparable<String>,MyInt
         this.id = id;
     }
 
-    @MyAnnotation(value = "ccc")
-    private Person(int id) {
+    public Person(String name, int age, int id) {
+        this.name = name;
+        this.age = age;
         this.id = id;
     }
 
-    @MyAnnotation
+    public Person(int id) {
+        this.id = id;
+    }
+
     private String show(String who){
         return who + "說" + name + "是SB";
     }
@@ -41,9 +46,9 @@ public class Person extends Creature<String> implements Comparable<String>,MyInt
         return 1;
     }
 
-    @Override
-    public void info() {
-        System.out.println("人類");
+
+    public String getName() {
+        return name;
     }
 
     @Override

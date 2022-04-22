@@ -1,8 +1,7 @@
 import org.junit.Test;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.*;
 
 public class GetStructWithClass {
     @Test
@@ -60,6 +59,85 @@ public class GetStructWithClass {
             System.out.println(", 名稱: " + method.getName());
             System.out.print(", 参数: " + method.getParameterTypes());
             System.out.println(", 异常信息" + method.getExceptionTypes());
+        }
+    }
+
+    @Test
+    public void test3(){
+        Class clazz = Person.class;
+
+        System.out.println("==========================getConstructors()==========================");
+        Constructor[] constructors = clazz.getConstructors();
+
+        for (Constructor c:
+             constructors) {
+            System.out.println(c);
+        }
+
+        System.out.println("==========================getDeclaredConstructors()==========================");
+        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        for (Constructor c:
+                declaredConstructors) {
+            System.out.println(c);
+        }
+    }
+
+    @Test
+    public void test4(){
+        Class clazz = Person.class;
+
+        System.out.println("==========================父類==========================");
+        Class superClass = clazz.getSuperclass();
+        System.out.println(superClass);
+
+        System.out.println("==========================帶泛的父類==========================");
+        Type genericSuperClass = clazz.getGenericSuperclass();
+        System.out.println(genericSuperClass);
+
+        System.out.println("==========================父類的泛型==========================");
+        ParameterizedType parameterizedType = (ParameterizedType) genericSuperClass;
+        //獲取泛型類型
+        Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+        for (Type t:
+        actualTypeArguments) {
+            System.out.println(t);
+        }
+
+    }
+    
+    @Test
+    public void test5(){
+        Class clazz = Person.class;
+        System.out.println("==========================接口==========================");
+        Class[] interfaces = clazz.getInterfaces();
+        for (Class i:
+             interfaces) {
+            System.out.println(i);
+        }
+        System.out.println("==========================父類的接口==========================");
+        Class[] superInterfaces = clazz.getSuperclass().getInterfaces();
+        for (Class i:
+                superInterfaces) {
+            System.out.println(i);
+        }
+    }
+
+    @Test
+    public void test6(){
+        Class clazz = Person.class;
+        System.out.println("==========================Package==========================");
+        Package pack = clazz.getPackage();
+        System.out.println(pack);
+    }
+
+    @Test
+    public void test7(){
+        Class clazz = Person.class;
+        System.out.println("==========================註解==========================");
+        Annotation[] annotations = clazz.getAnnotations();
+        for (Annotation a:
+             annotations) {
+            System.out.println(a);
         }
     }
 }
