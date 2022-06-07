@@ -1,8 +1,10 @@
 
 public class UAnTest1 {
     public static void main(String[] args) {
-        Test2(7);
+        String str = "a,b,c,d,e,f,g";
+        Test1(str);
 
+        Test2(7);
     }
     public static void Test1(String str){
         StringBuilder tempString = new StringBuilder();
